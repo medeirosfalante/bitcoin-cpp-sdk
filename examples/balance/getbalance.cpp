@@ -2,9 +2,9 @@
 
 int main()
 {
-    std::string username = "";
-    std::string password = "";
-    std::string address = "";
+    std::string username = "dev";
+    std::string password = "dev";
+    std::string address = "127.0.0.1";
     int port = 8332;
 
     try
