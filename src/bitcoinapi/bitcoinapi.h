@@ -53,7 +53,7 @@ public:
     std::string addmultisigaddress(int nrequired, const std::vector<std::string> &keys);
     std::string addmultisigaddress(int nrequired, const std::vector<std::string> &keys, const std::string &account);
     multisig_t createmultisig(int nrequired, const std::vector<std::string> &keys);
-    std::string getnewaddress(const std::string &account = "");
+    std::string getnewaddress(const std::string &label = "", const std::string &address_type = "");
     validateaddress_t validateaddress(const std::string &bitcoinaddress);
 
     void keypoolrefill();
