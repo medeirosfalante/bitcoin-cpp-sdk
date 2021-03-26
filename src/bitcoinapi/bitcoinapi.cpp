@@ -375,11 +375,18 @@ multisig_t BitcoinAPI::createmultisig(int nrequired, const vector<string> &keys)
 	return ret;
 }
 
-string BitcoinAPI::getnewaddress(const string &account)
+string BitcoinAPI::getnewaddress(const string &label, const string &address_type)
 {
 	string command = "getnewaddress";
 	Value params, result;
-	params.append(account);
+	if (label != "")
+	{
+		params.append(label);
+	}
+	if (label != "")
+	{
+		params.append(address_type);
+	}
 	result = sendcommand(command, params);
 	return result.asString();
 }
